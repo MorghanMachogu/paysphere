@@ -10,7 +10,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change_me_root}
       MYSQL_DATABASE: paysphere
       MYSQL_USER: paysphere
-      MYSQL_PASSWORD: ${MORGHAN}
+      MYSQL_PASSWORD: ${password_required}
       TZ: Africa/Nairobi
     volumes:
       - mysql_data:/var/lib/mysql
@@ -32,7 +32,7 @@ services:
       DB_HOST: mysql
       DB_NAME: paysphere
       DB_USER: paysphere
-      DB_PASS: ${MORGHAN}
+      DB_PASS: ${password_required}
       CORS_ORIGIN: ${PUBLIC_URL:-http://localhost:8080}
       MAIL_HOST: ${MAIL_HOST:-}
       MAIL_PORT: ${MAIL_PORT:-587}
