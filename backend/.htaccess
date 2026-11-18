@@ -1,0 +1,14 @@
+# Apache: only the api/ folder is reachable from the web.
+Options -Indexes
+
+# Pass the Authorization header through to PHP (needed for Bearer tokens on many hosts).
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+# Block everything outside api/ (config, lib, scripts, tests, logs, vendor, .env).
+RewriteRule ^(?!api/) - [F,L]
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
