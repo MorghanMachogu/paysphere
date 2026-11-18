@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PaySphere
 
 Payroll and HR automation for Kenyan SMEs: employee records, monthly payroll with PAYE, NSSF, SHIF and the
@@ -126,3 +127,7 @@ docs/screenshots/              screenshots of the running system for the project
 
 Automated salary disbursement through the Safaricom Daraja B2C API. Salaries are paid through the organisation's own
 M-Pesa business account or bank and recorded in PaySphere with their transaction references.
+=======
+# paysphere
+Payroll &amp; HR system for Kenyan SMEs: automated PAYE, NSSF, SHIF and Housing Levy with date-effective rates, payroll approval workflow, payslips, statutory reports, leave and attendance, and an employee self-service portal. PHP 8 + MySQL API, React web app, Flutter mobile app. BSc Computer Science final-year project, Kabarak University.
+>>>>>>> 3aed149ce0d70a3aa7dd9f29a40843a8daff97fa
